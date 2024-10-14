@@ -3,6 +3,11 @@
 # P2HW2
 # An assignment that analyzes grades and helps student understanding of lists.
 
+# Input grades for module 1, 2, 3, 4, 5, and 6
+# Perform float conversion to turn the list "grade_collection" into floating point numbers
+# Find the minimum, maximum, sum, and average of grade_collection using sequence-type operations
+# Display results
+
 grade1 = input('Enter grade for module 1: ')
 grade2 = input('Enter grade for module 2: ')
 grade3 = input('Enter grade for module 3: ')
