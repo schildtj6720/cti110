@@ -7,22 +7,24 @@ import random
 
 def disperse_change(extra_cash):
     
+    extra_cash = round(extra_cash, 2)
+    
     # Dollars
-    dollars = int(extra_cash) // 1
-    dol_remainder = (extra_cash - dollars) 
+    dollars = int(extra_cash)
+    extra_cash = extra_cash - dollars
     
     # Cents
-    quarters = (extra_cash - dollars) // .25
-    quarters = int(quarters)
+    quarters = int(extra_cash // 0.25)
+    extra_cash = extra_cash - quarters * .25
     
-    dimes = (extra_cash - dollars - quarters) // .10
-    dimes = int(dimes)
+    dimes = int(extra_cash // 0.10)
+    extra_cash = extra_cash - dimes * .10
     
-    nickels = (extra_cash - dollars - quarters - dimes) // .5
-    nickels = int(nickels)
+    nickels = int(extra_cash // 0.05)
+    extra_cash = extra_cash - nickels * .05
     
-    pennies = (extra_cash - dollars - quarters - dimes - nickels) // .01
-    pennies = int(pennies)
+    pennies = int(extra_cash // 0.01)
+    extra_cash = extra_cash - pennies * .01
     
     if (extra_cash == 0):
         print('No change')
